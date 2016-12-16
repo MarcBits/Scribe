@@ -43,8 +43,8 @@
                                     <constraint firstItem="xwR-f7-uVt" firstAttribute="centerX" secondItem="nuQ-Y1-Lka" secondAttribute="centerX" id="hFw-Pc-0lV"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="PLAY &amp; TRANSCRIBE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N3S-Yv-tMt">
-                                <rect key="frame" x="84" y="631" width="206" height="28"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PLAY &amp; TRANSCRIBE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N3S-Yv-tMt">
+                                <rect key="frame" x="90" y="631" width="194.5" height="28"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -56,14 +56,26 @@
                                 <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vEd-Fj-lsR">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vEd-Fj-lsR" customClass="CircleButton" customModule="Scribe" customModuleProvider="target">
                                 <rect key="frame" x="157" y="563" width="60" height="60"/>
                                 <color key="backgroundColor" red="0.85882352939999995" green="0.10980392160000001" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="IHW-L3-CTm"/>
                                     <constraint firstAttribute="width" constant="60" id="gOp-Sa-hh2"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="jeV-9k-bhh">
+                                <rect key="frame" x="157.5" y="563.5" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="HHq-k0-tEu"/>
+                                    <constraint firstAttribute="width" constant="60" id="bpv-fo-UTG"/>
+                                </constraints>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -73,9 +85,11 @@
                             <constraint firstItem="nuQ-Y1-Lka" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="RWU-vh-8qG"/>
                             <constraint firstItem="nuQ-Y1-Lka" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="VNB-H3-Na2"/>
                             <constraint firstItem="N3S-Yv-tMt" firstAttribute="top" secondItem="vEd-Fj-lsR" secondAttribute="bottom" constant="8" id="cCq-Ui-55H"/>
+                            <constraint firstItem="jeV-9k-bhh" firstAttribute="centerY" secondItem="vEd-Fj-lsR" secondAttribute="centerY" id="dfR-HH-ke5"/>
                             <constraint firstItem="vEd-Fj-lsR" firstAttribute="top" secondItem="kGn-wJ-16c" secondAttribute="bottom" constant="20" id="fve-5b-6vN"/>
                             <constraint firstAttribute="trailing" secondItem="nuQ-Y1-Lka" secondAttribute="trailing" id="i2W-3e-dC1"/>
                             <constraint firstItem="N3S-Yv-tMt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nTt-IU-zXU"/>
+                            <constraint firstItem="jeV-9k-bhh" firstAttribute="centerX" secondItem="vEd-Fj-lsR" secondAttribute="centerX" id="npd-Pm-qyp"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="N3S-Yv-tMt" secondAttribute="bottom" constant="8" id="qbV-ta-Gyp"/>
                             <constraint firstItem="kGn-wJ-16c" firstAttribute="top" secondItem="nuQ-Y1-Lka" secondAttribute="bottom" constant="20" id="w8k-Ch-eJV"/>
                         </constraints>
